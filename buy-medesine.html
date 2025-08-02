@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact,Buy & Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+</style>
+  </head>
+  <style>
+    .card-image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-image-wrapper .img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.card-image-wrapper:hover .img-main {
+  opacity: 0;
+}
+
+.card-image-wrapper:hover .img-hover {
+  opacity: 1;
+}
+
+
+
+
+
+.card-image-wrapper:hover .img-main {
+  opacity: 0;
+}
+
+.card-image-wrapper:hover .img-hover {
+  opacity: 1;
+}
+
+     #navbar-top{
+        position: fixed-top;
+      
+        justify-content: start;
+    z-index: 1;
+        
+        box-shadow:25px 20px 70px;
+        
+     }
+     .nav-item{
+
+        margin-left: 120px;
+        font-size: 16px;
+    }
+     .nav-item a{
+        font-size: 16px;
+     }
+     
+     
+     #navbar-top{
+        position: fixed-top;
+      
+        justify-content: start;
+    z-index: 1;
+        
+        box-shadow:25px 20px 70px;
+        
+     }
+     .circle{
+        display: flex;
+     }
+     .container-fluid{
+        width: 100%;
+     }
+     .carasoul{
+        margin-top: 1px;
+        
+     }
+    
+     .card{
+
+     }
+     .card img :hover{
+        background-color: #00000095;
+     }
+     .container-fluid{
+            display: flex;
+            justify-content: space-around;
+     }
+     .footer{
+        
+        padding: 40px 0;
+        background-color: #BB9381;
+     }
+     .footer .social{
+        text-align: center ;
+        padding-bottom: 25px;
+        color: white ;
+     }
+     .footer .social a{
+        font-size: 24px;
+        color: inherit;
+        border: 1px solid #ccc;
+        width: 40px;
+        height: 40px;
+        line-height: 38px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        margin: 0 9px;
+        opacity: 0.75;
+
+     }
+     .footer .social a:hover{
+        opacity: 0.9;
+     }
+     .footer ul{
+        margin-top: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 0;
+        text-align: center;
+
+     }
+     .footer ul a{
+        color: white;
+        text-decoration: none; 
+        opacity:0.8 ;
+
+     }
+     .footer ul li{
+        display: inline-block;
+        padding: 0 15px;
+
+     }
+     .footer ul li a:hover{
+        opacity: 1;
+     }
+     .footer p{
+        margin-top: 5px;
+        text-align: center;
+        font-size: 13px;
+        color: white;
+     }
+     .row img{
+        opacity: 1;
+     }
+     .row img :hover{
+          opacity: 1;
+     }
+     .img img{
+        width: 300px;
+        border-radius: 10px;
+        opacity: 0.95;
+        margin-top: 5px;
+     }
+     .img img:hover{
+        opacity: 1;
+     }
+     #dukh{
+        cursor: pointer;
+      opacity: 1;
+      overflow: hidden;
+      transition: 1.1s;
+     }
+     #dukh img:hover{
+    
+        scale: 1.1;
+     }
+     .ctype{
+             opacity: 1;
+     }
+     ul img{
+
+     }
+     ul img:hover{
+      scale: 1.2;
+      background-image: ;
+     }
+     .card-image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-image-wrapper .img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.card-image-wrapper:hover .img-main {
+  opacity: 0;
+}
+
+.card-image-wrapper:hover .img-hover {
+  opacity: 1;
+}
+
+
+
+
+
+.card-image-wrapper:hover .img-main {
+  opacity: 0;
+}
+
+.card-image-wrapper:hover .img-hover {
+  opacity: 1;
+}
+
+     #navbar-top{
+        position: fixed-top;
+      
+        justify-content: start;
+    z-index: 1;
+        
+        box-shadow:25px 20px 70px;
+        
+     }
+     .nav-item{
+
+        margin-left: 0px;
+        font-size: 16px;
+    }
+     .nav-item a{
+        font-size: 16px;
+     }
+     
+     
+     #navbar-top{
+        position: fixed-top;
+      
+        justify-content: start;
+    z-index: 1;
+        
+        box-shadow:25px 20px 70px;
+        
+     }
+     .circle{
+        display: flex;
+     }
+     .container-fluid{
+        width: 100%;
+     }
+     .carasoul{
+        margin-top: 1px;
+        
+     }
+    
+     .card{
+
+     }
+     .card img :hover{
+        background-color: #00000095;
+     }
+     .container-fluid{
+            display: flex;
+            justify-content: space-around;
+     }
+     .footer{
+        
+        padding: 40px 0;
+        background-color: #BB9381;
+     }
+     .footer .social{
+        text-align: center ;
+        padding-bottom: 25px;
+        color: white ;
+     }
+     .footer .social a{
+        font-size: 24px;
+        color: inherit;
+        border: 1px solid #ccc;
+        width: 40px;
+        height: 40px;
+        line-height: 38px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        margin: 0 9px;
+        opacity: 0.75;
+
+     }
+     .footer .social a:hover{
+        opacity: 0.9;
+     }
+     .footer ul{
+        margin-top: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 0;
+        text-align: center;
+
+     }
+     .footer ul a{
+        color: white;
+        text-decoration: none; 
+        opacity:0.8 ;
+
+     }
+     .footer ul li{
+        display: inline-block;
+        padding: 0 15px;
+
+     }
+     .footer ul li a:hover{
+        opacity: 1;
+     }
+     .footer p{
+        margin-top: 5px;
+        text-align: center;
+        font-size: 13px;
+        color: white;
+     }
+     .row img{
+        opacity: 1;
+     }
+     .row img :hover{
+          opacity: 1;
+     }
+     .img img{
+        width: 300px;
+        border-radius: 10px;
+        opacity: 0.95;
+        margin-top: 5px;
+     }
+     .img img:hover{
+        opacity: 1;
+     }
+     #dukh{
+        cursor: pointer;
+      opacity: 1;
+      overflow: hidden;
+      transition: 1.1s;
+     }
+     #dukh img:hover{
+    
+        scale: 1.1;
+     }
+     .ctype{
+             opacity: 1;
+     }
+     ul img{
+
+     }
+     ul img:hover{
+      scale: 1.2;
+      background-image: ;
+     }
+     * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      background-color: #2C3E50; /* Deep teal */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-brand img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .nav-link {
+      font-size: 1rem;
+      margin-left: 2rem;
+      color: #ECF0F1 !important; /* Light gray */
+      transition: color 0.3s;
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      animation: fadeInUp 1s ease-out;
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+
+    /* Gradient for each nav link */
+    .nav-link.home {
+      background: linear-gradient(90deg, #0f6ebc, #E67E22, #69b517); /* Teal, coral, light gray */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-link.whitening {
+      background: linear-gradient(90deg, #037df6, #e5066a, #b408e4); /* Teal, blue, light gray */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-link.services {
+      background: linear-gradient(90deg, #021c36, #E74C3C, #d4e306); /* Teal, red, light gray */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-link.about {
+      background: linear-gradient(90deg, #ca0e0e, #14b524, #0c6c85); /* Teal, purple, light gray */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 3px;
+      background: #E67E22; /* Coral */
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-link:hover {
+      color: transparent !important; /* Keep gradient on hover */
+    }
+
+    .navbar .form-control {
+      border-radius: 20px;
+    }
+
+    .navbar .dropdown-menu {
+      border-radius: 10px;
+      background-color: #2C3E50; /* Match navbar */
+    }
+
+    .navbar .dropdown-item {
+      color: #ECF0F1; /* Light gray */
+    }
+
+    .navbar .dropdown-item:hover {
+      background-color: #E67E22; /* Coral hover */
+      color: #fff;
+    }
+
+    /* About Section */
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin: 7rem 1rem 2rem;
+      overflow: hidden;
+    }
+
+    .about-image {
+      flex: 1 1 300px;
+      min-height: 300px;
+      background-image: url(QP2.jpg);
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.3s ease;
+    }
+
+    .about-image:hover {
+      transform: scale(1.05);
+    }
+
+    .about-content {
+      flex: 1 1 400px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .about-content h2 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #2C3E50; /* Fallback color */
+      font-weight: 700;
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      background: linear-gradient(90deg, #2C3E50, #E67E22); /* Teal to coral */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInUp 1s ease-out;
+      padding-bottom: 0.5rem;
+  }
+
+    .about-content h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: #E67E22; /* Coral */
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    .about-content h2:hover::after {
+      width: 150px;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .about-content p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-content .btn {
+      background-color: #2C3E50; /* Teal */
+      color: #ECF0F1; /* Light gray */
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      transition: background-color 0.3s;
+    }
+
+    .about-content .btn:hover {
+      background-color: #E67E22; /* Coral */
+    }
+
+    /* Footer */
+    .footer {
+      padding: 2rem 0;
+      background-color: #2C3E50; /* Teal */
+      color: #ECF0F1; /* Light gray */
+      text-align: center;
+    }
+
+    .footer .social a {
+      font-size: 1.5rem;
+      width: 48px;
+      height: 48px;
+      line-height: 48px;
+      display: inline-block;
+      border-radius: 50%;
+      margin: 0 0.75rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer .social a:hover {
+      transform: scale(1.15) rotate(10deg); /* Scale and slight rotation */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Glow effect */
+    }
+
+    /* Social media icon colors */
+    .footer .social .fa-instagram {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      color: #fff;
+    }
+
+    .footer .social .fa-twitter {
+      background: #1DA1F2; /* Twitter blue */
+      color: #fff;
+    }
+
+    .footer .social .fa-snapchat {
+      background: #FFFC00; /* Snapchat yellow */
+      color: #000;
+    }
+
+    .footer .social .fa-youtube {
+      background: #FF0000; /* YouTube red */
+      color: #fff;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .footer ul li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    .footer ul li a {
+      color: #ECF0F1; /* Light gray */
+      text-decoration: none;
+      font-size: 1rem;
+      opacity: 0.8;
+      transition: opacity 0.3s, color 0.3s;
+    }
+
+    .footer ul li a:hover {
+      color: #E67E22; /* Coral */
+      opacity: 1;
+    }
+
+    .footer p {
+      font-size: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar-nav {
+        text-align: center;
+      }
+
+      .nav-link {
+        margin-left: 0;
+        padding: 0.5rem 0;
+      }
+
+      .about-container {
+        flex-direction: column;
+        margin-top: 5rem;
+      }
+
+      .about-image {
+        height: 250px;
+      }
+
+      .about-content {
+        padding: 1.5rem;
+      }
+
+      .about-content h2 {
+        font-size: 2.2rem;
+      }
+
+      .about-content h2::after {
+        width: 80px;
+      }
+
+      .about-content h2:hover::after {
+        width: 120px;
+      }
+
+      .about-content p {
+        font-size: 1rem;
+      }
+
+      .footer .social a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.3rem;
+      }
+
+      .nav-link::after {
+        width: 80px;
+      }
+
+      .nav-link:hover::after {
+        width: 120px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .about-content h2 {
+        font-size: 1.8rem;
+      }
+
+      .about-content h2::after {
+        width: 60px;
+      }
+
+      .about-content h2:hover::after {
+        width: 100px;
+      }
+
+      .footer .social a {
+        font-size: 1.2rem;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+      }
+
+      .footer ul li {
+        margin: 0 0.5rem;
+      }
+
+      .nav-link::after {
+        width: 60px;
+      }
+
+      .nav-link:hover::after {
+        width: 100px;
+      }
+    }
+  </style>
+  <body>
+   <nav class="navbar navbar-expand-lg fixed-top" style=""> 
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="pik\popo.png" alt="Company Logo" style="background-color: #2C3E50;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link home" href="Home-Medical.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link whitening" href="whitning-Medical.html">Whitening</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link services" href="Servesis-medical.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link about" href="About-medesin.html">About</a>
+          </li>
+        </ul>
+        <form class="d-flex me-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+        </form>
+        <div class="dropdown">
+          <a href="index-Medisin.html" class="d-block text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="pik\my Dp.jpg" alt="User Profile" class="rounded-circle" style="width: 50px;">
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="buy-medesine.html">Add Curt</a></li>
+            <li><a class="dropdown-item" href="index.html">Registration</a></li>
+            <li><a class="dropdown-item" href="index.html">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="index.html">Sign in</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container checkout-container d-flex justify-content-center" style="margin-top: 100px;">
+    <div class="col-lg-8 col-md-10 col-sm-12">
+      <h4 class="mb-3 text-center" style="font-weight: 900;color: #000;text-shadow: 5px 5px 10px ;">Registration</h4>
+      <form class="needs-validation" novalidate>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label for="firstName" class="form-label">First name</label>
+            <input type="text" class="form-control" id="firstName" required>
+            <div class="invalid-feedback">Valid first name is required.</div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="lastName" class="form-label">Last name</label>
+            <input type="text" class="form-control" id="lastName" required>
+            <div class="invalid-feedback">Valid last name is required.</div>
+          </div>
+
+          <div class="col-12">
+            <label for="username" class="form-label">Username</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text">@</span>
+              <input type="text" class="form-control" id="username" required>
+              <div class="invalid-feedback">Your username is required.</div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            <div class="invalid-feedback">Please enter a valid email address for shipping updates.</div>
+          </div>
+
+          <div class="col-12">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+            <div class="invalid-feedback">Please enter your shipping address.</div>
+          </div>
+
+          <div class="col-12">
+            <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+            <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+          </div>
+
+          <div class="col-md-5">
+            <label for="country" class="form-label">Country</label>
+            <select class="form-select" id="country" required>
+              <option value="">Choose...</option>
+              <option>United States</option>
+            </select>
+            <div class="invalid-feedback">Please select a valid country.</div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="state" class="form-label">State</label>
+            <select class="form-select" id="state" required>
+              <option value="">Choose...</option>
+              <option>California</option>
+            </select>
+            <div class="invalid-feedback">Please provide a valid state.</div>
+          </div>
+
+          <div class="col-md-3">
+            <label for="zip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="zip" required>
+            <div class="invalid-feedback">Zip code required.</div>
+          </div>
+        </div>
+
+        <hr class="my-4">
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="same-address">
+          <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="save-info">
+          <label class="form-check-label" for="save-info">Save this information for next time</label>
+        </div>
+
+        <hr class="my-4">
+
+        <h4 class="mb-3">Payment</h4>
+
+        <div class="my-3">
+          <div class="form-check">
+            <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+            <label class="form-check-label" for="credit">Credit card</label>
+          </div>
+          <div class="form-check">
+            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+            <label class="form-check-label" for="debit">Debit card</label>
+          </div>
+          <div class="form-check">
+            <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+            <label class="form-check-label" for="paypal">PayPal</label>
+          </div>
+        </div>
+
+        <div class="row gy-3">
+          <div class="col-md-6">
+            <label for="cc-name" class="form-label">Name on card</label>
+            <input type="text" class="form-control" id="cc-name" required>
+            <small class="text-muted">Full name as displayed on card</small>
+            <div class="invalid-feedback">Name on card is required</div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="cc-number" class="form-label">Credit card number</label>
+            <input type="text" class="form-control" id="cc-number" required>
+            <div class="invalid-feedback">Credit card number is required</div>
+          </div>
+
+          <div class="col-md-3">
+            <label for="cc-expiration" class="form-label">Expiration</label>
+            <input type="text" class="form-control" id="cc-expiration" required>
+            <div class="invalid-feedback">Expiration date required</div>
+          </div>
+
+          <div class="col-md-3">
+            <label for="cc-cvv" class="form-label">CVV</label>
+            <input type="text" class="form-control" id="cc-cvv" required>
+            <div class="invalid-feedback">Security code required</div>
+          </div>
+        </div>
+
+        <hr class="my-4">
+        <button class="w-100 btn btn-info btn-lg" type="submit" style="font-weight: 900;color: #000;text-shadow: 5px 5px 10px ;">Continue to checkout</button>
+      </form>
+    </div>
+  </div>
+
+
+<section class="footer" style="margin-top: 20px; font-weight: 400; padding: 40px 0; background-color: #34495E;">
+      <!-- Footer container with spacing and background color -->
+      <div class="social" style="text-align: center; padding-bottom: 25px; color: white;">
+        <!-- Social media icons section -->
+        <a href="https://instagram.com"style="font-size: 24px; width: 40px; height: 40px; line-height: 38px; display: inline-block; text-align: center; border-radius: 50%; margin: 0 9px; opacity: 0.75; transition: opacity 0.3s, transform 0.3s; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: #fff;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-instagram"></i></a>
+        <!-- Instagram icon with zoom effect on hover -->
+        <a href="https://twitter.com" style="font-size: 24px; width: 40px; height: 40px; line-height: 38px; display: inline-block; text-align: center; border-radius: 50%; margin: 0 9px; opacity: 0.75; transition: opacity 0.3s, transform 0.3s; background: #1DA1F2; color: #fff;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-twitter"></i></a>
+        <!-- Twitter icon with zoom effect on hover -->
+        <a href="https://snapchat.com" style="font-size: 24px; width: 40px; height: 40px; line-height: 38px; display: inline-block; text-align: center; border-radius: 50%; margin: 0 9px; opacity: 0.75; transition: opacity 0.3s, transform 0.3s; background: #FFFC00; color: #000;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-snapchat"></i></a>
+        <!-- Snapchat icon with zoom effect on hover -->
+        <a href="https://youtube.com" style="font-size: 24px; width: 40px; height: 40px; line-height: 38px; display: inline-block; text-align: center; border-radius: 50%; margin: 0 9px; opacity: 0.75; transition: opacity 0.3s, transform 0.3s; background: #FF0000; color: #fff;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-youtube"></i></a>
+        <!-- YouTube icon with zoom effect on hover -->
+      </div>
+      <ul style="margin-top: 0; padding: 0; list-style: none; font-size: 18px; line-height: 1.6; margin-bottom: 0; text-align: center;">
+        <!-- Navigation links section -->
+        <li><a href="Home-Medical.html" style="color: white; text-decoration: none; opacity: 0.8; display: inline-block; transition: transform 0.3s, opacity 0.3s; padding: 5px 10px; border-radius: 50%;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">Home</a></li>
+        <!-- Home link with zoom effect on hover -->
+        <li><a href="Servesis-medical.html" style="color: white; text-decoration: none; opacity: 0.8; display: inline-block; transition: transform 0.3s, opacity 0.3s; padding: 5px 10px; border-radius: 50%;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">Servesis</a></li>
+        <!-- Services link with zoom effect on hover -->
+        <li><a href="buy-medesine.html" style="color: white; text-decoration: none; opacity: 0.8; display: inline-block; transition: transform 0.3s, opacity 0.3s; padding: 5px 10px; border-radius: 50%;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">Contact</a></li>
+        <!-- Contact link with zoom effect on hover -->
+        <li><a href="About-medesin.html" style="color: white; text-decoration: none; opacity: 0.8; display: inline-block; transition: transform 0.3s, opacity 0.3s; padding: 5px 10px; border-radius: 50%;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">About</a></li>
+        <!-- About link with zoom effect on hover -->
+      </ul>
+      <p style="margin-top: 5px; text-align: center; font-size: 13px; color: white;">Future Coder @ 2027</p>
+      <!-- Copyright or additional info text -->
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  </body>
+</html>

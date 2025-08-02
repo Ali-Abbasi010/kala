@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Whitning</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      .card-image-wrapper {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .card-image-wrapper img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .card-image-wrapper .img-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+
+      .card-image-wrapper:hover .img-main {
+        opacity: 0;
+      }
+
+      .card-image-wrapper:hover .img-hover {
+        opacity: 1;
+      }
+
+      #navbar-top {
+        position: fixed;
+        top: 0;
+        justify-content: start;
+        z-index: 1;
+        box-shadow: 25px 20px 70px;
+      }
+
+      .nav-item {
+        margin-left: 30px;
+        font-size: 16px;
+      }
+
+      .nav-item a {
+        font-size: 16px;
+      }
+
+      .circle {
+        display: flex;
+      }
+
+      .container-fluid {
+        width: 100%;
+      }
+
+      .carasoul {
+        margin-top: 1px;
+      }
+
+      .card {
+      }
+
+      .card img:hover {
+        background-color: #00000095;
+      }
+
+      .container-fluid {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .footer {
+        padding: 40px 0;
+        background-color: #34495E; /* Changed to a darker slate blue */
+      }
+
+      .footer .social {
+        text-align: center;
+        padding-bottom: 25px;
+        color: white;
+      }
+
+      .footer .social a {
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
+        line-height: 38px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        margin: 0 9px;
+        opacity: 0.75;
+        transition: opacity 0.3s, transform 0.3s; /* Smooth transition for opacity and zoom effect */
+      }
+
+      .footer .social a:hover {
+        opacity: 0.9;
+        transform: scale(1.2); /* Zoom-in circle effect on hover */
+      }
+
+      .footer .social .fa-instagram {
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        color: #fff;
+      }
+
+      .footer .social .fa-twitter {
+        background: #1DA1F2;
+        color: #fff;
+      }
+
+      .footer .social .fa-snapchat {
+        background: #FFFC00;
+        color: #000;
+      }
+
+      .footer .social .fa-youtube {
+        background: #FF0000;
+        color: #fff;
+      }
+
+      .footer ul {
+        margin-top: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 0;
+        text-align: center;
+      }
+
+      .footer ul a {
+        color: white;
+        text-decoration: none;
+        opacity: 0.8;
+        display: inline-block;
+        transition: transform 0.3s, opacity 0.3s; /* Smooth transition for zoom and opacity */
+        padding: 5px 10px;
+        border-radius: 50%; /* Makes links circular for zoom effect */
+      }
+
+      .footer ul li {
+        display: inline-block;
+        padding: 0 15px;
+      }
+
+      .footer ul li a:hover {
+        opacity: 1;
+        transform: scale(1.2); /* Zoom-in circle effect on hover */
+      }
+
+      .footer p {
+        margin-top: 5px;
+        text-align: center;
+        font-size: 13px;
+        color: white;
+      }
+
+      .row img {
+        opacity: 1;
+      }
+
+      .row img:hover {
+        opacity: 1;
+      }
+
+      .img img {
+        width: 300px;
+        border-radius: 10px;
+        opacity: 0.95;
+        margin-top: 5px;
+      }
+
+      .img img:hover {
+        opacity: 1;
+      }
+
+      #dukh {
+        cursor: pointer;
+        opacity: 1;
+        overflow: hidden;
+        transition: 1.1s;
+      }
+
+      #dukh img:hover {
+        scale: 1.1;
+      }
+
+      .ctype {
+        opacity: 1;
+      }
+
+      ul img {
+      }
+
+      ul img:hover {
+        scale: 1.2;
+      }
+
+      /* Navbar Styles */
+      .navbar {
+        background-color: #2C3E50;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .navbar-brand img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .nav-link {
+        font-size: 3rem;
+        margin-left: 0rem;
+        color: #ECF0F1 !important;
+        transition: color 0.3s;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 0px;
+        font-weight: 700;
+        animation: fadeInUp 1s ease-out;
+        padding-bottom: 0.5rem;
+        display: inline-block;
+        justify-content: start;
+      }
+
+      .nav-link.home {
+        background: linear-gradient(90deg, #FF6B6B, #4ECDC4, #45B7D1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .nav-link.whitning {
+        background: linear-gradient(90deg, #FFD700, #FF6347, #20B2AA);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .nav-link.servesis {
+        background: linear-gradient(90deg, #6A1B9A, #00BCD4, #4CAF50);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .nav-link.about {
+        background: linear-gradient(90deg, #E91E63, #9C27B0, #3F51B5);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 3px;
+        background: #27AE60;
+        border-radius: 2px;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .nav-link:hover {
+        color: transparent !important;
+      }
+
+      .navbar .form-control {
+        border-radius: 20px;
+      }
+
+      .navbar .dropdown-menu {
+        border-radius: 10px;
+        background-color: #2C3E50;
+      }
+
+      .navbar .dropdown-item {
+        color: #ECF0F1;
+      }
+
+      .navbar .dropdown-item:hover {
+        background-color: #27AE60;
+        color: #fff;
+      }
+
+      @media (max-width: 768px) {
+        .navbar-nav {
+          text-align: center;
+        }
+
+        .nav-link {
+          margin-left: 0;
+          padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+          width: 80px;
+        }
+
+        .nav-link:hover::after {
+          width: 120px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .nav-link::after {
+          width: 60px;
+        }
+
+        .nav-link:hover::after {
+          width: 100px;
+        }
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .carousel {
+    margin-top: 80px; /* Aligns with fixed navbar height */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #2C3E50, #3498DB);
+  }
+
+  .carousel-inner {
+    border-radius: 10px;
+  }
+
+  .carousel-item img {
+    border-radius: 10px;
+  }
+
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    text-align: left;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  @media (max-width: 768px) {
+    .carousel-item img {
+      height: 200px;
+    }
+
+    .carousel-caption {
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      padding: 10px;
+    }
+
+    .carousel-caption h5 {
+      font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .carousel-item img {
+      height: 150px;
+    }
+
+    .carousel-caption {
+      bottom: 5px;
+      left: 5px;
+      right: 5px;
+      padding: 5px;
+    }
+
+    .carousel-caption h5 {
+      font-size:1rem;
+    }
+
+    .carousel-caption p {
+      font-size: 0.8rem;
+    }
+  }
+   .product-card {
+      position: relative;
+    }
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      height: 200px;
+    }
+    .main-img, .hover-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.3s ease;
+    }
+    .hover-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+    .product-card:hover .image-container .main-img {
+      opacity: 0;
+    }
+    .product-card:hover .image-container .hover-img {
+      opacity: 1;
+    }
+    .action-buttons {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      gap: 10px;
+    }
+    .product-card:hover .image-container .action-buttons {
+      opacity: 1;
+    }
+    .btn {
+      width: 100px;
+    }
+    @media (max-width: 767.98px) {
+      .image-container {
+        height: 150px;
+      }
+      .btn {
+        width: 80px;
+        font-size: 0.9rem;
+      }
+      .row-cols-md-3 > .col {
+        margin-bottom: 1rem;
+      }
+    }
+    @media (max-width: 575.98px) {
+      .image-container {
+        height: 120px;
+      }
+      .btn {
+        width: 70px;
+        font-size: 0.8rem;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="fixed-top">
+      <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #2C3E50; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="pik\popo.png" alt="Company Logo" style="background-color: #2C3E50; width: 40px; height: 40px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link home" href="Home-Medical.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link whitning" href="whitning-Medical.html">Whitning,s</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link servesis" href="Servesis-medical.html">Servesis</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link about" href="About-medesin.html">About</a>
+              </li>
+            </ul>
+            <form class="d-flex me-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+            </form>
+            <div class="dropdown">
+          <a href="index-Medisin.html" class="d-block text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="pik\my Dp.jpg" alt="User Profile" class="rounded-circle" style="width: 50px;">
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="buy-medesine.html">Add Curt</a></li>
+            <li><a class="dropdown-item" href="index.html">Registration</a></li>
+            <li><a class="dropdown-item" href="index.html">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="index.html">Sign in</a></li>
+          </ul>
+        </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="cursor: pointer;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="pik\opop13.jpeg" class="d-block w-100" alt="Slide 1" style="height: 400px; object-fit: cover;">
+    </div>
+    <div class="carousel-item">
+      <img src="pik\s2.png" class="d-block w-100" alt="Slide 2" style="height: 400px; object-fit: cover;">
+    </div>
+    <div class="carousel-item">
+      <img src="pik\opop1.jpg" class="d-block w-100" alt="Slide 3" style="height: 400px; object-fit: cover;">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev" style="opacity: 0; width: 0; height: 0;">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next" style="opacity: 0; width: 0; height: 0;">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+
+
+
+
+          <marquee behavior="" direction="trl" style="
+
+            background: linear-gradient(135deg,red,blue,pink,green);
+
+            color: aliceblue;
+
+            font-size: 30pxpx;
+
+            height: 50px;
+
+         margin-top: 10px; padding-bottom: 15px; ">
+
+          <pre style="font-size: 40px;font-family: Georgia, 'Times New Roman', Times, serif;">whitening      whitening        whitening     whitening      whitening         </pre>
+          </marquee>
+
+   <div class="container" >
+  <!-- Row 1: col-md-8 and col-md-4 -->
+  <div class="row mb-3 text-center" >
+    <div class="col-12 col-md-8">
+      <div class="product-card mb-4 rounded-3 shadow-sm">
+        <div class="card-body"style="border: 3px solid ;">
+          <div class="image-container">
+            <img src="pik\QP.jpg" class="main-img" alt="Main Image">
+            <img src="pik\QP.jpg" class="hover-img" alt="Hover Image">
+            <div class="action-buttons">
+              <a href="view-medicin.html">
+                <button type="button" class="btn btn-lg btn-outline-success">View</button>
+              </a>
+              <a href="buy-medesine.html">
+                <button type="button" class="btn btn-lg btn-outline-warning">Buy</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="product-card mb-4 rounded-3 shadow-sm">
+        <div class="card-body"style="border: 3px solid;">
+          <div class="image-container">
+            <img src="pik\q1.webp" class="main-img" alt="Main Image">
+            <img src="pik\q1.webp" class="hover-img" alt="Hover Image">
+            <div class="action-buttons">
+             <a href="view-medicin.html">
+                <button type="button" class="btn btn-lg btn-outline-success">View</button>
+              </a>
+              <a href="buy-medesine.html">
+                <button type="button" class="btn btn-lg btn-outline-warning">Buy</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2: col-md-4 and col-md-8 (reverse of Row 1) -->
+  <div class="row mb-3 text-center">
+    <div class="col-12 col-md-4">
+      <div class="product-card mb-4 rounded-3 shadow-sm">
+        <div class="card-body"style="border: 3px solid ;">
+          <div class="image-container">
+            <img src="pik\QP3.jpg" class="main-img" alt="Main Image">
+            <img src="pik\QP3.jpg" class="hover-img" alt="Hover Image">
+            <div class="action-buttons">
+              <a href="view-medicin.html">
+                <button type="button" class="btn btn-lg btn-outline-success">View</button>
+              </a>
+              <a href="buy-medesine.html">
+                <button type="button" class="btn btn-lg btn-outline-warning">Buy</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-8">
+      <div class="product-card mb-4 rounded-3 shadow-sm">
+        <div class="card-body">
+          <div class="image-container"style="border: 3px solid ;">
+            <img src="pik\opop5.jpg" class="main-img" alt="Main Image">
+            <img src="pik\opop5.jpg" class="hover-img" alt="Hover Image">
+            <div class="action-buttons">
+              <a href="view-medicin.html">
+                <button type="button" class="btn btn-lg btn-outline-success">View</button>
+              </a>
+              <a href="buy-medesine.html">
+                <button type="button" class="btn btn-lg btn-outline-warning">Buy</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 3: col-md-8 and col-md-4 (reverse of Row 2) -->
+  <div class="row mb-3 text-center">
+    <div class="col-12 col-md-8">
+      <div class="product-card mb-4 rounded-3 shadow-sm">
+        <div class="card-body"style="border: 3px solid ;">
+          <div class="image-container">
+            <img src="pik\s5.png" class="main-img" alt="Main Image">
+            <img src="pik\s5.png" class="hover-img" alt="Hover Image">
+            <div class="action-buttons">
+              <a href="view-medicin.html">
+                <button type="button" class="btn btn-lg btn-outline-success">View</button>
+              </a>
+              <a href="buy-medesine.html">
+                <button type="button" class="btn btn-lg btn-outline-warning">Buy</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="product-card mb-4 rounded-3 shadow-sm">
+        <div class="card-body">
+          <div class="image-container"style="border: 3px solid ;">
+            <img src="pik\QP.jpg" class="main-img" alt="Main Image">
+            <img src="pik\QP.jpg" class="hover-img" alt="Hover Image">
+            <div class="action-buttons">
+              <a href="view-medicin.html">
+                <button type="button" class="btn btn-lg btn-outline-success">View</button>
+              </a>
+              <a href="buy-medesine.html">
+                <button type="button" class="btn btn-lg btn-outline-warning">Buy</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 4: col-md-4 and col-md-8 (reverse of Row 3) -->
+  <div class="row mb-3 text-center">
+    <div class="col-12 col-md-4">
+      <div class="product-card mb-4 rounded-3 shadow-sm">
+        <div class="card-body"style="border: 3px solid ;">
+          <div class="image-container">
+            <img src="pik\PQ.jpg" class="main-img" alt="Main Image">
+            <img src="pik\PQ.jpg" class="hover-img" alt="Hover Image">
+            <div class="action-buttons">
+              <a href="view-medicin.html">
+                <button type="button" class="btn btn-lg btn-outline-success">View</button>
+              </a>
+              <a href="buy-medesine.html">
+                <button type="button" class="btn btn-lg btn-outline-warning">Buy</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-8">
+      <div class="product-card mb-4 rounded-3 shadow-sm">
+        <div class="card-body"style="border: 3px solid ;">
+          <div class="image-container">
+            <img src="pik\skin-care-resize.png" class="main-img" alt="Main Image">
+            <img src="pik\opop13.jpeg" class="hover-img" alt="Hover Image">
+            <div class="action-buttons">
+              <a href="view-medicin.html">
+                <button type="button" class="btn btn-lg btn-outline-success">View</button>
+              </a>
+              <a href="buy-medesine.html">
+                <button type="button" class="btn btn-lg btn-outline-warning">Buy</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 5: Single column with col-12 (full width) -->
+  <div class="row mb-3 text-center">
+    <div class="col-12">
+      <div class="product-card mb-4 rounded-3 shadow-sm">
+        <div class="card-body"style="border: 3px solid ;">
+          <div class="image-container">
+            <img src="pik\o2.png" class="main-img" alt="Main Image">
+            <img src="pik\opop6.jpg" class="hover-img" alt="Hover Image">
+            <div class="action-buttons">
+              <a href="view-medicin.html">
+                <button type="button" class="btn btn-lg btn-outline-success">View</button>
+              </a>
+              <a href="buy-medesine.html">
+                <button type="button" class="btn btn-lg btn-outline-warning">Buy</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+
+
+    <section class="footer" style="margin-top: 20px; font-weight: 400; padding: 40px 0; background-color: #34495E;">
+      <!-- Footer container with spacing and background color -->
+      <div class="social" style="text-align: center; padding-bottom: 25px; color: white;">
+        <!-- Social media icons section -->
+        <a href="https://instagram.com"style="font-size: 24px; width: 40px; height: 40px; line-height: 38px; display: inline-block; text-align: center; border-radius: 50%; margin: 0 9px; opacity: 0.75; transition: opacity 0.3s, transform 0.3s; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: #fff;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-instagram"></i></a>
+        <!-- Instagram icon with zoom effect on hover -->
+        <a href="https://twitter.com" style="font-size: 24px; width: 40px; height: 40px; line-height: 38px; display: inline-block; text-align: center; border-radius: 50%; margin: 0 9px; opacity: 0.75; transition: opacity 0.3s, transform 0.3s; background: #1DA1F2; color: #fff;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-twitter"></i></a>
+        <!-- Twitter icon with zoom effect on hover -->
+        <a href="https://snapchat.com" style="font-size: 24px; width: 40px; height: 40px; line-height: 38px; display: inline-block; text-align: center; border-radius: 50%; margin: 0 9px; opacity: 0.75; transition: opacity 0.3s, transform 0.3s; background: #FFFC00; color: #000;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-snapchat"></i></a>
+        <!-- Snapchat icon with zoom effect on hover -->
+        <a href="https://youtube.com" style="font-size: 24px; width: 40px; height: 40px; line-height: 38px; display: inline-block; text-align: center; border-radius: 50%; margin: 0 9px; opacity: 0.75; transition: opacity 0.3s, transform 0.3s; background: #FF0000; color: #fff;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"><i class="fab fa-youtube"></i></a>
+        <!-- YouTube icon with zoom effect on hover -->
+      </div>
+      <ul style="margin-top: 0; padding: 0; list-style: none; font-size: 18px; line-height: 1.6; margin-bottom: 0; text-align: center;">
+        <!-- Navigation links section -->
+        <li><a href="#" style="color: white; text-decoration: none; opacity: 0.8; display: inline-block; transition: transform 0.3s, opacity 0.3s; padding: 5px 10px; border-radius: 50%;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">Home</a></li>
+        <!-- Home link with zoom effect on hover -->
+        <li><a href="#" style="color: white; text-decoration: none; opacity: 0.8; display: inline-block; transition: transform 0.3s, opacity 0.3s; padding: 5px 10px; border-radius: 50%;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">servesis</a></li>
+        <!-- Services link with zoom effect on hover -->
+        <li><a href="#" style="color: white; text-decoration: none; opacity: 0.8; display: inline-block; transition: transform 0.3s, opacity 0.3s; padding: 5px 10px; border-radius: 50%;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">sontact</a></li>
+        <!-- Contact link with zoom effect on hover -->
+        <li><a href="#" style="color: white; text-decoration: none; opacity: 0.8; display: inline-block; transition: transform 0.3s, opacity 0.3s; padding: 5px 10px; border-radius: 50%;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">About</a></li>
+        <!-- About link with zoom effect on hover -->
+      </ul>
+      <p style="margin-top: 5px; text-align: center; font-size: 13px; color: white;">Future Coder @ 2027</p>
+      <!-- Copyright or additional info text -->
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  </body>
+</html>
